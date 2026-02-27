@@ -6,8 +6,8 @@
  #include <stdio.h>
 
  int main( void ) {
-    float a[4][4];
-    float b[4];
+    float a[4][4] = {{1,1,1,1}, {1,1,1,1}, {1,1,1,1}, {1,1,1,1}};
+    float b[4] = {1,1,1,1};
     float c[4];
 
     /*
@@ -16,5 +16,6 @@
     Store your answer in vector c
     Print your final answer
     */
+    
     return 0;
  }
