@@ -4,6 +4,7 @@
  */
 
  #include <stdio.h>
+ #include <stdlib.h>
 
  int main( void ) {
     int n = 5;
@@ -12,7 +13,7 @@
     // allocation of heap memory for vectors
     a = calloc( n, sizeof(float) );
     b = calloc( n, sizeof(float) );
-    d = calloc( n, sizeof(float) );
+    d = malloc(sizeof(float) );
 
     /*
     Code to initialise the vectors with numerical data 
@@ -22,6 +23,23 @@
     Store your answer in d
     print your final answer
     */
+
+
+   for (int i = 0; i<n;i++)
+   {
+      a[i] = 1;
+      b[i] = 1;      
+   }
+
+   *d = 0;
+
+
+   for (int i = 0; i<n; i++)
+   {
+      *d += a[i]*b[i];
+   }
+
+   printf("Dot Product: %f\n", *d);
 
     // explicit deallocation of heap memory before exit */
     free(a);
